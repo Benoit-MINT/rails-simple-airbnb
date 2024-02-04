@@ -1,0 +1,14 @@
+<%= render "navbar" %>
+
+<div class="card-trip">
+  <img src="https://www.travaux.com/images/cms/original/ebcd4d3c-6a00-47d2-8165-6d9e192082af.jpeg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2> <%= @flat.name %> </h2>
+      <p> <%= @flat.adress %> </p>
+      <p> <%= @flat.description %> </p>
+    </div>
+    <h2 class="card-trip-pricing"> <%= @flat.price_per_night %>€</h2>
+    <h2 class="card-trip-pricing"> <%= @flat.number_of_guests %> guests </h2>
+  </div>
+</div>

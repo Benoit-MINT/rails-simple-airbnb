@@ -1,0 +1,24 @@
+<%= render "navbar" %>
+
+<h2 class= "m-3">All our flats : <%= @flats.length %> </h2>
+
+<div class="cards m-3">
+<%  @flats.each do |flat| %>
+<div class="card" style="width: 18rem;">
+  <img src="https://www.travaux.com/images/cms/original/ebcd4d3c-6a00-47d2-8165-6d9e192082af.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> <%= flat.name %> </h5>
+    <p class="card-text"> <%= flat.adress %> </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <%= flat.price_per_night %> </li>
+    <li class="list-group-item"> <%= flat.number_of_guests %> </li>
+  </ul>
+  <div class="card-body">
+    <a href="/flats/<%=flat.id%>" class="card-link">More info</a>
+    <a href="/flats/<%=flat.id%>/edit" class="card-link">Edit</a>
+    <a data-turbo-method="delete" data-turbo-confirm="Are you sure?" href="/flats/<%=flat.id%>" class="card-link">Delete</a>
+  </div>
+</div>
+<% end %>
+</div>

@@ -1,0 +1,13 @@
+<%= render "navbar" %>
+
+<h1>Add a new flat</h1>
+<div class="m-3">
+  <%= simple_form_for @flat do |f| %>
+  <%= f.input :name %>
+  <%= f.input :adress %>
+  <%= f.input :description %>
+  <%= f.input :price_per_night %>
+  <%= f.input :number_of_guests %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
